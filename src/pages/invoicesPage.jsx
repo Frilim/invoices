@@ -10,7 +10,6 @@ import * as Yup from 'yup';
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-alpine.css';
 
-
 import {CModal, CModalHeader, CModalTitle, CModalBody, CModalFooter, CButton, CFormInput, CFormSelect, CFormLabel, CForm, CRow, CCol,} from "@coreui/react-pro";
 import { handleCSVFile } from '../services/csvImportService';
 
@@ -110,6 +109,7 @@ export default function InvoicesPage() {
             value={statusFilter}
             onChange={e => setStatusFilter(e.target.value)}
             className="border rounded px-2 py-1"
+            style={{ backgroundColor: '#cdd0d4ff' }}
           >
             <option value="">All</option>
             <option value="1">Paid</option>
@@ -124,6 +124,7 @@ export default function InvoicesPage() {
             value={dateFrom}
             onChange={e => setDateFrom(e.target.value)}
             className="border rounded px-2 py-1"
+            style={{ backgroundColor: '#cdd0d4ff' }}
           />
         </div>
 
@@ -134,6 +135,7 @@ export default function InvoicesPage() {
             value={dateTo}
             onChange={e => setDateTo(e.target.value)}
             className="border rounded px-2 py-1"
+            style={{ backgroundColor: '#cdd0d4ff' }}
           />
         </div>
 
@@ -194,6 +196,7 @@ export default function InvoicesPage() {
                       name="clientName"
                       type="text"
                       id="clientName"
+                      style={{ backgroundColor: '#cdd0d4ff' }}
                     />
                     <ErrorMessage name="clientName" component="div" className="text-red-600 text-sm" />
                   </CCol>
@@ -206,6 +209,7 @@ export default function InvoicesPage() {
                       name="date"
                       type="date"
                       id="date"
+                      style={{ backgroundColor: '#cdd0d4ff' }}
                     />
                     <ErrorMessage name="date" component="div" className="text-red-600 text-sm" />
                   </CCol>
@@ -219,6 +223,7 @@ export default function InvoicesPage() {
                       type="number"
                       step="0.01"
                       id="amount"
+                      style={{ backgroundColor: '#cdd0d4ff' }}
                     />
                     <ErrorMessage name="amount" component="div" className="text-red-600 text-sm" />
                   </CCol>
@@ -230,6 +235,7 @@ export default function InvoicesPage() {
                       as={CFormSelect}
                       name="status"
                       id="status"
+                      style={{ backgroundColor: '#cdd0d4ff' }}
                     >
                       <option value="">Select status</option>
                       <option value="1">Paid</option>
